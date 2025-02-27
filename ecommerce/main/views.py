@@ -23,6 +23,6 @@ class ProductList(generics.ListCreateAPIView):
 
 
 class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = models.Vendor.objects.all()
+    queryset = models.Product.objects.all()
     serializer_class = serializers.ProductDetailSerializer
 

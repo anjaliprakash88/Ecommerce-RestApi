@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Dental_Clinic',
+        'NAME': 'ecommerce',
         'USER': 'postgres',
         'PASSWORD':'soft_pkd',
         'HOST': 'localhost'

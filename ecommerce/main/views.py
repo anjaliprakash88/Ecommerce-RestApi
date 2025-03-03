@@ -26,3 +26,12 @@ class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.Product.objects.all()
     serializer_class = serializers.ProductDetailSerializer
 
+
+# Customers
+class CustomerList(generics.ListCreateAPIView):
+    queryset = models.Customer.objects.all()
+    serializer_class = serializers.CustomerSerializer
+
+class CustomerDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Customer.objects.all()
+    serializer_class = serializers.CustomerDetailSerializer

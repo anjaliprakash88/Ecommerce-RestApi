@@ -9,7 +9,7 @@ class Vendor(models.Model):
     def __str__(self):
         return self.user.username
 
-
+# --------------PRODUCT MODEL--------------
 class ProductCategory(models.Model):
     title = models.CharField(max_length=200)
     detail = models.TextField(null=True)
@@ -27,7 +27,7 @@ class Product(models.Model):
         return self.title
     
 
-#Customer model
+#----------------CUSTOMER MODEL---------------
 class Customer(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     mobile = models.PositiveBigIntegerField()
@@ -36,12 +36,13 @@ class Customer(models.Model):
         return self.user.username
     
 
+
 #Order model
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     order_time = models.DateTimeField(auto_now_add=True)
 
-# Order Item nmodel
+# ---------------ORDER ITEM MODEL---------------
 class OrderItems(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE,related_name='order_items')
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

@@ -48,6 +48,7 @@ class OrderDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = models.OrderItems.objects.all()
     serializer_class = serializers.OrderDetailSerializer
 
+
 # class OrderDetail(generics.ListAPIView):
 #     serializer_class = serializers.OrderDetailSerializer
 #     def get_queryset(self):

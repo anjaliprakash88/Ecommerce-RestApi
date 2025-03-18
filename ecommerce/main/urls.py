@@ -13,7 +13,7 @@ urlpatterns = [
     # Products
     path('products/',views.ProductList.as_view()),
     path('products/<int:pk>',views.ProductDetail.as_view()),
-    # Product Categories
+    # Product Categories.js
     path('categories/',views.CategoryList.as_view()),
     path('category/<int:pk>',views.CategoryDetail.as_view()),
     # Customers

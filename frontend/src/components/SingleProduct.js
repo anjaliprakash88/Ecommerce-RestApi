@@ -1,0 +1,22 @@
+import logo from '../logo.svg';
+
+function SingleProduct(props) {
+
+    return(
+        <div className="col-12 col-md-3 mb-4">
+            <div className="card">
+                <img src={logo} className="card-img-top" alt="..." />
+                <div className="card-body">
+                <h4 className="card-title">{props.title}</h4>
+                <h5 className="card-title text-muted">Price: Rs 500</h5>
+                </div>
+                <div className="card-footer">
+                    <button title="add to cart" className="btn btn-success btn-sm"><i class="fa-solid fa-cart-plus"></i></button>
+                    <button title="add to wishlist" className="btn btn-danger btn-sm ms-2"><i class="fa fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default SingleProduct;

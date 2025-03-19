@@ -16,6 +16,9 @@ return(
               <li className="nav-item">
                 <Link className="nav-link" aria-current="page" to="/Categories">Categories</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" aria-current="page" to="/checkout">My cart (4)</Link>
+              </li>
             </ul>
 
           </div>

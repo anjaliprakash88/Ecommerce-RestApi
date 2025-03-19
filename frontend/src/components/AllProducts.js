@@ -1,10 +1,10 @@
 import logo from '../logo.svg';
 import SingleProduct from './SingleProduct';
 
-function CategoryProducts(){
+function AllProducts(){
     return(
         <section className="container mt-4">
-            <h3 className="mb-4"><span className='text-success'>Python</span> products</h3>
+            <h3 className="mb-4">All products</h3>
               <div className="row">
                 <SingleProduct  title="Django Project 1" />
                 <SingleProduct  title="Django Project 2" />
@@ -41,4 +41,4 @@ function CategoryProducts(){
     )
 }
 
-export default CategoryProducts;
+export default AllProducts;

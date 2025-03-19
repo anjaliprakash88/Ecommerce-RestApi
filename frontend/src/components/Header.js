@@ -16,6 +16,18 @@ return(
               <li className="nav-item">
                 <Link className="nav-link" aria-current="page" to="/Categories">Categories</Link>
               </li>
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  My Account
+                </a>
+                <ul className="dropdown-menu">
+                  <li><Link className="dropdown-item" to="/customer/register">Register</Link></li>
+                  <li><Link className="dropdown-item" to="/customer/login">Login</Link></li>
+                  <li><hr className="dropdown-divider" /></li>
+                  <li><a className="dropdown-item" href="#">Dashboard</a></li>
+                  <li><a className="dropdown-item" href="#">Logout</a></li>
+                </ul>
+              </li>
               <li className="nav-item">
                 <Link className="nav-link" aria-current="page" to="/checkout">My cart (4)</Link>
               </li>

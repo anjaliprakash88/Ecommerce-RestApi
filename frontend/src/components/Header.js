@@ -24,8 +24,8 @@ return(
                   <li><Link className="dropdown-item" to="/customer/register">Register</Link></li>
                   <li><Link className="dropdown-item" to="/customer/login">Login</Link></li>
                   <li><hr className="dropdown-divider" /></li>
-                  <li><a className="dropdown-item" href="#">Dashboard</a></li>
-                  <li><a className="dropdown-item" href="#">Logout</a></li>
+                  <li><Link className="dropdown-item" to="/customer/dashboard">Dashboard</Link></li>
+                  <li><a className="dropdown-item" to="/customer/register">Logout</a></li>
                 </ul>
               </li>
               <li className="nav-item">

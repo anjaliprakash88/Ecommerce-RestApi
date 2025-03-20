@@ -13,6 +13,7 @@ import CategoryProducts from './components/CategoryProducts';
 import Checkout from './components/Checkout';
 import Register from './components/Customer/Register';
 import Login from './components/Customer/Login'
+import Dashboard from './components/Customer/Dashboard'
 function App() {
   return (
   <>
@@ -26,6 +27,7 @@ function App() {
           <Route path='/checkout' element={<Checkout/>} />
           <Route path='/customer/register' element={<Register/>} />
           <Route path='/customer/login' element={<Login/>} />
+          <Route path='/customer/dashboard' element={<Dashboard/>} />
         </Routes>
       <Footer/>
       </>

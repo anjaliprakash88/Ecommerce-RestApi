@@ -9,11 +9,14 @@ function Sidebar(){
                     <Link to="/customer/orders" className="list-group-item list-group-item-action">
                         orders
                     </Link>
-                    <a href="#" className="list-group-item list-group-item-action">
+                    <a href="/customer/wishlist" className="list-group-item list-group-item-action">
                         Wishlist
                     </a>
-                    <a href="#" className="list-group-item list-group-item-action disabled">
+                    <a href="/customer/profile" className="list-group-item list-group-item-action">
                         Profile
+                    </a>
+                    <a href="/customer/changepassword" className="list-group-item list-group-item-action">
+                        Change Password
                     </a>
                     <a href="#" className="list-group-item list-group-item-action">
                         Addresses

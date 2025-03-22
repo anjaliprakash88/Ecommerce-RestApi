@@ -1,8 +1,10 @@
 import {Routes, Route} from 'react-router-dom';
 
-
+// Assets
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
+
+// Website
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
@@ -11,9 +13,15 @@ import ProductDetail from './components/ProductDetail';
 import Categories from './components/Categories';
 import CategoryProducts from './components/CategoryProducts';
 import Checkout from './components/Checkout';
+import OrderSuccess from './components/OrderSuccess';
+import OrderFailure from './components/OrderFailure';
+
+// Customer Panel
 import Register from './components/Customer/Register';
-import Login from './components/Customer/Login'
-import Dashboard from './components/Customer/Dashboard'
+import Login from './components/Customer/Login';
+import Dashboard from './components/Customer/Dashboard';
+import Orders from './components/Customer/Orders';
+
 function App() {
   return (
   <>
@@ -25,9 +33,12 @@ function App() {
           <Route path='/category/:category_slug/:category_id' element={<CategoryProducts/>} />
           <Route path='/product/:product_slug/:product_id' element={<ProductDetail/>} />
           <Route path='/checkout' element={<Checkout/>} />
+          <Route path='/order/success' element={<OrderSuccess/>} />
+          <Route path='/order/failure' element={<OrderFailure/>} />
           <Route path='/customer/register' element={<Register/>} />
           <Route path='/customer/login' element={<Login/>} />
           <Route path='/customer/dashboard' element={<Dashboard/>} />
+          <Route path='/customer/orders' element={<Orders/>} />
         </Routes>
       <Footer/>
       </>

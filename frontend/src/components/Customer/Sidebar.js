@@ -18,7 +18,7 @@ function Sidebar(){
                     <a href="/customer/changepassword" className="list-group-item list-group-item-action">
                         Change Password
                     </a>
-                    <a href="#" className="list-group-item list-group-item-action">
+                    <a href="/customer/addresses" className="list-group-item list-group-item-action">
                         Addresses
                     </a>
                     <a href="#" className="list-group-item list-group-item-action text-danger">

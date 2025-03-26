@@ -15,7 +15,7 @@ function Sidebar(){
                     <Link to="/seller/orders" className="list-group-item list-group-item-action">
                         orders
                     </Link>
-                    <a href="/seller/profile" className="list-group-item list-group-item-action">
+                    <a href="/seller/customers" className="list-group-item list-group-item-action">
                         Customers
                     </a>
                     <a href="/seller/changepassword" className="list-group-item list-group-item-action">

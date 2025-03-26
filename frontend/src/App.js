@@ -27,6 +27,14 @@ import ChangePassword from './components/Customer/ChangePassword';
 import AddressList from './components/Customer/AddressList';
 import AddAddress from "./components/Customer/AddAddress";
 
+
+// Seller Panel 
+import SellerRegister from './components/Seller/SellerRegister';
+import SellerLogin from './components/Seller/SellerLogin';
+import SellerDashboard from './components/Seller/SellerDashboard';
+
+
+
 function App() {
   return (
   <>
@@ -40,6 +48,8 @@ function App() {
           <Route path='/checkout' element={<Checkout/>} />
           <Route path='/order/success' element={<OrderSuccess/>} />
           <Route path='/order/failure' element={<OrderFailure/>} />
+
+          {/* Customer Routes */}
           <Route path='/customer/register' element={<Register/>} />
           <Route path='/customer/login' element={<Login/>} />
           <Route path='/customer/dashboard' element={<Dashboard/>} />
@@ -49,6 +59,11 @@ function App() {
           <Route path='/customer/changepassword' element={<ChangePassword/>} />
           <Route path='/customer/addresses' element={<AddressList/>} />
           <Route path="/customer/add-addresses" element={<AddAddress />} />
+
+          {/* Seller Routes */}
+          <Route path='/seller/register' element={<SellerRegister/>} />
+          <Route path='/seller/login' element={<SellerLogin/>} />
+          <Route path='/seller/dashboard' element={<SellerDashboard/>} />
         </Routes>
       <Footer/>
       </>

@@ -32,6 +32,8 @@ import AddAddress from "./components/Customer/AddAddress";
 import SellerRegister from './components/Seller/SellerRegister';
 import SellerLogin from './components/Seller/SellerLogin';
 import SellerDashboard from './components/Seller/SellerDashboard';
+import SellerProducts from './components/Seller/SellerProducts';
+import AddProduct from './components/Seller/AddProduct';
 
 
 
@@ -64,6 +66,8 @@ function App() {
           <Route path='/seller/register' element={<SellerRegister/>} />
           <Route path='/seller/login' element={<SellerLogin/>} />
           <Route path='/seller/dashboard' element={<SellerDashboard/>} />
+          <Route path='/seller/products' element={<SellerProducts/>} />
+          <Route path='/seller/addproduct' element={<AddProduct/>} />
         </Routes>
       <Footer/>
       </>

@@ -6,15 +6,15 @@ function Sidebar(){
                     <Link to="/seller/dashboard" className="list-group-item list-group-item-action">
                         Dashborad
                     </Link>
-                    <a href="/seller/products" className="list-group-item list-group-item-action">
+                    <Link to="/seller/products" className="list-group-item list-group-item-action">
                         Products
-                    </a>
+                    </Link>
+                    <Link to="/seller/addproduct" className="list-group-item list-group-item-action">
+                        Add Products
+                    </Link>
                     <Link to="/seller/orders" className="list-group-item list-group-item-action">
                         orders
                     </Link>
-                    <a href="/seller/products" className="list-group-item list-group-item-action">
-                        Products
-                    </a>
                     <a href="/seller/profile" className="list-group-item list-group-item-action">
                         Customers
                     </a>

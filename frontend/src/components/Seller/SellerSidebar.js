@@ -18,9 +18,15 @@ function Sidebar(){
                     <a href="/seller/customers" className="list-group-item list-group-item-action">
                         Customers
                     </a>
-                    <a href="/seller/changepassword" className="list-group-item list-group-item-action">
+                    <a href="/seller/reports" className="list-group-item list-group-item-action">
                         Reports
                     </a>
+                    <Link to="/seller/vendorprofile" className="list-group-item list-group-item-action">
+                        Profile
+                    </Link>
+                    <Link to="/seller/vendorchangepassword" className="list-group-item list-group-item-action">
+                        Change Password
+                    </Link>
                     <a href="#" className="list-group-item list-group-item-action text-danger">
                         Logout
                     </a>

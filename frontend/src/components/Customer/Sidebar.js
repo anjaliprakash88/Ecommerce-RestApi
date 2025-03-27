@@ -12,12 +12,12 @@ function Sidebar(){
                     <a href="/customer/wishlist" className="list-group-item list-group-item-action">
                         Wishlist
                     </a>
-                    <a href="/customer/profile" className="list-group-item list-group-item-action">
+                    <Link to="/customer/profile" className="list-group-item list-group-item-action">
                         Profile
-                    </a>
-                    <a href="/customer/changepassword" className="list-group-item list-group-item-action">
+                    </Link>
+                    <Link to="/customer/changepassword" className="list-group-item list-group-item-action">
                         Change Password
-                    </a>
+                    </Link>
                     <a href="/customer/addresses" className="list-group-item list-group-item-action">
                         Addresses
                     </a>

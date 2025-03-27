@@ -1,22 +1,36 @@
 import logo from '../logo.svg';
 import SingleProduct from './SingleProduct';
+import {useState, useEffect} from 'react';
 
 function AllProducts(){
+    
+    const [products, setProducts]=useState([])
+
+    // useEffect(() => {
+    //     fetch('http://127.0.0.1:8000/api/products/')
+    //     .then((response) => response.json())
+    //     .then((data) => setProducts(data.results));
+    // });
+
+    useEffect(() => {
+        fetchData('http://127.0.0.1:8000/api/products/')
+    });
+
+    function fetchData(baseurl){
+        fetch(baseurl)
+        .then((response) => response.json())
+        .then((data) => setProducts(data.results));
+    }
+
     return(
         <section className="container mt-4">
             <h3 className="mb-4">All products</h3>
               <div className="row">
-                <SingleProduct  title="Django Project 1" />
-                <SingleProduct  title="Django Project 2" />
-                <SingleProduct  title="Django Project 3" />
-                <SingleProduct  title="Django Project 4" />
-                <SingleProduct  title="Django Project 5" />
-                <SingleProduct  title="Django Project" />
-                <SingleProduct  title="Django Project" />
-                <SingleProduct  title="Django Project" />
-                <SingleProduct  title="Django Project" />
-                <SingleProduct  title="Django Project" />
-                <SingleProduct  title="Django Project" />
+                {
+                    products.map((product)=><SingleProduct product={product} />)
+                }
+                
+               
               </div>
 
               <nav aria-label="Page navigation example">

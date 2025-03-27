@@ -1,10 +1,14 @@
+import { Link } from 'react-router-dom';
 import logo from '../logo.svg';
 import SingleProduct from './SingleProduct';
 import {useState, useEffect} from 'react';
 
 function AllProducts(){
-    
-    const [products, setProducts]=useState([])
+    const baseUrl='http://127.0.0.1:8000/api';
+    const [products, setProducts]=useState([]);
+    const [totalResult,setTotalResults]=useState(0);
+    const [currentPage, setCurrentPage] = useState(1);
+
 
     // useEffect(() => {
     //     fetch('http://127.0.0.1:8000/api/products/')
@@ -13,13 +17,25 @@ function AllProducts(){
     // });
 
     useEffect(() => {
-        fetchData('http://127.0.0.1:8000/api/products/')
-    });
+        fetchData(`${baseUrl}/products/?page=${currentPage}`);
+    }, [currentPage]);
 
     function fetchData(baseurl){
         fetch(baseurl)
         .then((response) => response.json())
-        .then((data) => setProducts(data.results));
+        .then((data) => {
+            setProducts(data.results);
+            setTotalResults(data.count);
+        });
+    }
+
+    function changeUrl(baseurl){
+        fetchData(baseurl);
+    }
+
+    var links = [];
+    for(let i=1;i<=totalResult;i++){
+        links.push(<li class="page-item"><Link onClick={() =>changeUrl(baseUrl+`/products/?page=${i}`)} class="page-link" to={`/products/?page=${i}`}>{i}</Link></li>)
     }
 
     return(
@@ -40,9 +56,7 @@ function AllProducts(){
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                     </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    {links}
                     <li class="page-item">
                     <a class="page-link" href="#" aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>

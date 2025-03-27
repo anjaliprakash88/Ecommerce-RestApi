@@ -120,22 +120,7 @@ USE_I18N = True
 USE_TZ = True
 
 
-CORS_ALLOW_ALL_ORIGINS = True 
 
-# Alternatively, allow specific origins
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",  # Example: React frontend running on port 3000
-#     "https://your-frontend-domain.com",
-# ]
-
-CORS_ALLOW_CREDENTIALS = True  # Allow cookies to be included in requests
-
-# If you need to allow specific headers
-CORS_ALLOW_HEADERS = [
-    'content-type',
-    'authorization',
-    'X-Requested-With',
-]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
@@ -159,3 +144,22 @@ REST_FRAMEWORK = {
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',   #LimitOffsetPagination 
     'PAGE_SIZE':1
 }
+
+
+
+CORS_ALLOW_ALL_ORIGINS = True 
+
+# Alternatively, allow specific origins
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",  # Example: React frontend running on port 3000
+#     "https://your-frontend-domain.com",
+# ]
+
+CORS_ALLOW_CREDENTIALS = True  # Allow cookies to be included in requests
+
+# If you need to allow specific headers
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
+    'X-Requested-With',
+]

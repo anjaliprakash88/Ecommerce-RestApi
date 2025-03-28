@@ -8,22 +8,27 @@ function Categories() {
   const [totalResult, setTotalResults] = useState(0);
 
   useEffect(() => {
-    fetchData(baseUrl + '/categories');
+    fetchData(baseUrl + '/categories/');
   }, []);
-
+  console.log(Array.isArray(categories));
   function fetchData(baseurl) {
     fetch(baseurl)
       .then((response) => response.json())
       .then((data) => {
-        setCategories(data.results); // Ensure it's an array
-        setTotalResults(data.count);
+        console.log(data);
+        setCategories(data.data || data.results || []); // Ensure it's an array
+        setTotalResults(data.count || data.length);
       });
   }
+
+  function changeUrl(baseurl){
+    fetchData(baseurl);
+}
 var links = [];
 var limit = 1;
 var totalLinks = totalResult / limit;
     for(let i=1;i<=totalLinks;i++){
-        links.push(<li class="page-item"><Link onClick={() =>changeUrl(baseUrl+`/products/?page=${i}`)} class="page-link" to={`/products/?page=${i}`}>{i}</Link></li>)
+        links.push(<li className="page-item"><Link onClick={() =>changeUrl(baseUrl+`/products/?page=${i}`)} className="page-link" to={`/products/?page=${i}`}>{i}</Link></li>)
     }
   return (
     <section className="container mt-4">

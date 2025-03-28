@@ -1,6 +1,6 @@
 import logo from '../logo.svg';
 import SingleProduct from './SingleProduct';
-
+import { useState, useEffect } from 'react';
 function CategoryProducts(){
     return(
         <section className="container mt-4">

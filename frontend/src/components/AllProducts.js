@@ -34,8 +34,10 @@ function AllProducts(){
     }
 
     var links = [];
-    for(let i=1;i<=totalResult;i++){
-        links.push(<li class="page-item"><Link onClick={() =>changeUrl(baseUrl+`/products/?page=${i}`)} class="page-link" to={`/products/?page=${i}`}>{i}</Link></li>)
+     var limit = 1;
+     var totalLinks = totalResult / limit;
+    for(let i=1;i<=totalLinks;i++){
+        links.push(<li class="page-item"><Link onClick={() =>changeUrl(baseUrl+`/categories/?page=${i}`)} class="page-link" to={`/categories/?page=${i}`}>{i}</Link></li>)
     }
 
     return(
@@ -51,17 +53,7 @@ function AllProducts(){
 
               <nav aria-label="Page navigation example">
                 <ul class="pagination">
-                    <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                    </li>
                     {links}
-                    <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                    </li>
                 </ul>
             </nav>
 

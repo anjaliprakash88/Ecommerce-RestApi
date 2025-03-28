@@ -3,6 +3,24 @@ import logo from '../logo.svg';
 import SingleProduct from './SingleProduct';
 
  function Home(){
+ const products=[
+ {
+ 'title':'Product 1',
+ 'price':100
+ },
+ {
+ 'title':'Product 2',
+ 'price':200
+ },
+ {
+ 'title':'Product 3',
+ 'price':300
+ },
+ {
+ 'title':'Product 4',
+ 'price':400
+ },
+ ]
 return(
 
 <main className="mt-4">
@@ -10,14 +28,9 @@ return(
       {/* LATEST PRODUCTS */}
       <h3 className="mb-4">Latest products<Link to="/products" className="float-end btn btn-dark">View all products<i class="fa-solid fa-arrow-right-long"></i></Link></h3>
       <div className="row mb-4">
-      <SingleProduct  title="Django Project 1" />
-      <SingleProduct  title="Django Project 1" />
-      <SingleProduct  title="Django Project 1" />
-      <SingleProduct  title="Django Project 1" />
-      <SingleProduct  title="Django Project 1" />
-      <SingleProduct  title="Django Project 1" />
-      <SingleProduct  title="Django Project 1" />
-      <SingleProduct  title="Django Project 1" />
+      {
+        products.map((product)=><SingleProduct product={product} />)
+    }
       </div>
        {/* END LATEST PRODUCTS */}
 

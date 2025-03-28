@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'main'
+    'main',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -118,6 +120,8 @@ USE_I18N = True
 USE_TZ = True
 
 
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
@@ -130,9 +134,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
  
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ],
     # 'DEFAULT_AUTHENTICATION_CLASSES': [
     #     'rest_framework_simplejwt.authentication.JWTAuthentication',
     # ],
@@ -140,3 +144,22 @@ REST_FRAMEWORK = {
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',   #LimitOffsetPagination 
     'PAGE_SIZE':1
 }
+
+
+
+CORS_ALLOW_ALL_ORIGINS = True 
+
+# Alternatively, allow specific origins
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",  # Example: React frontend running on port 3000
+#     "https://your-frontend-domain.com",
+# ]
+
+CORS_ALLOW_CREDENTIALS = True  # Allow cookies to be included in requests
+
+# If you need to allow specific headers
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
+    'X-Requested-With',
+]
